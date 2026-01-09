@@ -1,0 +1,229 @@
+# Korean translations / 한국어
+app:
+  title: "Whisper Subtitles"
+  
+# Navigation
+nav:
+  new_job: "새 작업"
+  tasks: "작업"
+  settings: "설정"
+  logout: "로그아웃"
+
+# Login
+login:
+  title: "로그인"
+  username: "사용자 이름"
+  password: "비밀번호"
+  submit: "로그인"
+  error: "잘못된 자격 증명"
+
+# New Job Form
+job_form:
+  title: "새 작업"
+  tabs:
+    file: "파일"
+    url: "URL"
+    magnet: "마그넷"
+    torrent: "토렌트"
+  file:
+    drag_drop: "동영상을 여기에 드래그하세요"
+    or_click: "또는 클릭하여 선택"
+  url:
+    label: "동영상 직접 URL"
+    placeholder: "https://example.com/video.mp4"
+  magnet:
+    label: "마그넷 링크"
+    placeholder: "magnet:?xt=urn:btih:..."
+  torrent:
+    drag_drop: ".torrent 파일을 드래그하세요"
+  submit: "처리 시작"
+  upload_progress: "파일 업로드 중..."
+
+# Jobs List
+jobs:
+  title: "작업"
+  refresh: "새로고침"
+  empty: "활성 작업 없음"
+  unknown: "알 수 없음"
+  delete_confirm: "작업을 삭제하시겠습니까?"
+  status:
+    pending: "대기 중"
+    downloading: "다운로드 중"
+    extracting: "오디오 추출 중"
+    awaiting_track: "트랙 선택"
+    transcribing: "변환 중"
+    embedding: "자막 삽입 중"
+    converting: "변환 중"
+    completed: "완료"
+    failed: "실패"
+  actions:
+    pause: "일시 정지"
+    resume: "재개"
+    select_track: "트랙 선택"
+    download_srt: "SRT 다운로드"
+    download_video: "동영상 다운로드"
+    watch_online: "온라인 시청"
+    pending_conversion: "대기 중"
+    delete: "삭제"
+  type:
+    upload: "📁 파일"
+    file: "📁 파일"
+    url: "🔗 URL"
+    magnet: "🧲 마그넷"
+    torrent: "📦 토렌트"
+
+# Settings
+settings:
+  title: "설정"
+  model:
+    label: "인식 모델"
+    hint: "대부분의 작업에 권장"
+    descriptions:
+      tiny: "빠른 테스트용, 낮은 정확도"
+      base: "빠르지만 오류 있음"
+      small: "속도와 품질의 균형"
+      medium: "대부분의 작업에 권장"
+      large-v2: "최고 정확도, 모든 언어"
+      large-v3-int4: "Whisper V3 (INT4) - 빠름, N150용"
+      large-v3-int8: "Whisper V3 (INT8) - N150 권장"
+      large-v3-fp16: "Whisper V3 (FP16) - 최고 정확도"
+    speeds:
+      tiny: "실시간보다 약 32배 빠름"
+      base: "실시간보다 약 16배 빠름"
+      small: "실시간보다 약 10배 빠름"
+      medium: "실시간보다 약 5배 빠름"
+      large-v2: "실시간보다 약 3배 빠름"
+  threads:
+    label: "CPU 스레드"
+    hint: "0 = 자동 감지 (모든 코어)"
+    auto: "자동"
+  audio_language:
+    label: "기본 오디오 언어"
+  interface_language:
+    label: "인터페이스 언어"
+  password:
+    title: "비밀번호 변경"
+    current: "현재 비밀번호"
+    new: "새 비밀번호"
+    submit: "비밀번호 변경"
+  save: "설정 저장"
+
+# Track Selection
+tracks:
+  title: "오디오 트랙 선택"
+  apply_to_all: "모든 파일에 적용"
+  select: "선택"
+  track_n: "트랙 {n}"
+  unknown_language: "알 수 없는 언어"
+  channels:
+    one: "채널"
+    few: "채널"
+    many: "채널"
+
+# File Selection
+files:
+  title: "파일 선택"
+  choose_files: "다운로드할 파일을 선택하세요:"
+  select_all: "모두 선택"
+  deselect_all: "선택 해제"
+  download_selected: "선택한 항목 다운로드"
+  selected_count: "선택됨: {selected} / {total}"
+  select_at_least_one: "최소 하나의 파일을 선택하세요"
+  no_video_files: "토렌트에서 동영상 파일을 찾을 수 없습니다"
+  loading_files: "파일 목록 로딩 중..."
+  load_error: "파일 목록을 불러올 수 없습니다"
+
+# Common
+common:
+  close: "닫기"
+  cancel: "취소"
+  confirm: "확인"
+  loading: "로딩 중..."
+  error: "오류"
+  success: "성공"
+
+# File sizes
+size:
+  b: "B"
+  kb: "KB"
+  mb: "MB"
+  gb: "GB"
+
+# Languages for audio
+languages:
+  auto: "Автовизначення"
+  ru: "Русский"
+  en: "English"
+  uk: "Українська"
+  kk: "Қазақша"
+  uz: "Ozbek"
+  ky: "Кыргызча"
+  tg: "Тоҷикӣ"
+  de: "Deutsch"
+  fr: "Français"
+  es: "Español"
+  it: "Italiano"
+  pt: "Português"
+  ja: "日本語"
+  zh: "中文"
+  ko: "한국어"
+  tr: "Türkçe"
+  ar: "العربية"
+  hi: "हिन्दी"
+  pl: "Polski"
+  nl: "Nederlands"
+  sv: "Svenska"
+  da: "Dansk"
+  no: "Norsk"
+  fi: "Suomi"
+  cs: "Čeština"
+  sk: "Slovenčina"
+  hu: "Magyar"
+  ro: "Română"
+  bg: "Български"
+  el: "Ελληνικά"
+  he: "עברית"
+  th: "ไทย"
+  vi: "Tiếng Việt"
+  id: "Bahasa Indonesia"
+  ms: "Bahasa Melayu"
+  be: "Беларуская"
+  az: "Azərbaycan"
+  ka: "ქართული"
+  hy: "Հայադdelays"
+
+# 알림 메시지
+toast:
+  error:
+    load_settings: "설정 로드 오류"
+    save_settings: "설정 저장 오류"
+    change_password: "비밀번호 변경 오류"
+    load_jobs: "작업 로드 오류"
+    pause: "일시 정지 오류"
+    delete: "삭제 오류"
+    load_tracks: "트랙 정보 로드 오류"
+    select_track: "트랙 선택 오류"
+    create_job: "작업 생성 오류"
+    upload: "업로드 오류"
+    network: "네트워크 오류"
+    select_file: "파일을 선택하세요"
+    enter_url: "URL을 입력하세요"
+    enter_magnet: "마그넷 링크를 입력하세요"
+    select_torrent: "토렌트 파일을 선택하세요"
+    no_video_files: "토렌트에서 동영상 파일을 찾을 수 없습니다"
+    load_files: "파일 목록을 불러올 수 없습니다"
+    select_at_least_one: "최소 하나의 파일을 선택하세요"
+  success:
+    settings_saved: "설정이 저장되었습니다"
+    password_changed: "비밀번호가 변경되었습니다"
+    track_selected: "트랙이 선택되었습니다, 인식을 시작합니다"
+    all_tracks_selected: "모든 트랙이 선택되었습니다, 인식을 시작합니다"
+    job_created: "작업이 생성되었습니다"
+    job_deleted: "작업이 삭제되었습니다"
+    download_paused: "다운로드가 일시 정지되었습니다"
+    download_resumed: "다운로드가 재개되었습니다"
+  info:
+    track_remaining: "트랙이 선택되었습니다. 남은 수: {count}"
+    loading_files: "파일 목록 로딩 중..."
+  login:
+    invalid: "잘못된 사용자 이름 또는 비밀번호"

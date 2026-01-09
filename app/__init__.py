@@ -1,0 +1,1 @@
+# Whisper Subtitle Generator

@@ -1,0 +1,229 @@
+# Japanese translations / 日本語
+app:
+  title: "Whisper Subtitles"
+  
+# Navigation
+nav:
+  new_job: "新規ジョブ"
+  tasks: "タスク"
+  settings: "設定"
+  logout: "ログアウト"
+
+# Login
+login:
+  title: "ログイン"
+  username: "ユーザー名"
+  password: "パスワード"
+  submit: "ログイン"
+  error: "認証情報が無効です"
+
+# New Job Form
+job_form:
+  title: "新規ジョブ"
+  tabs:
+    file: "ファイル"
+    url: "URL"
+    magnet: "マグネット"
+    torrent: "トレント"
+  file:
+    drag_drop: "動画をここにドラッグ"
+    or_click: "またはクリックして選択"
+  url:
+    label: "動画の直接URL"
+    placeholder: "https://example.com/video.mp4"
+  magnet:
+    label: "マグネットリンク"
+    placeholder: "magnet:?xt=urn:btih:..."
+  torrent:
+    drag_drop: ".torrentファイルをドラッグ"
+  submit: "処理を開始"
+  upload_progress: "ファイルをアップロード中..."
+
+# Jobs List
+jobs:
+  title: "タスク"
+  refresh: "更新"
+  empty: "アクティブなタスクはありません"
+  unknown: "不明"
+  delete_confirm: "タスクを削除しますか？"
+  status:
+    pending: "保留中"
+    downloading: "ダウンロード中"
+    extracting: "音声を抽出中"
+    awaiting_track: "トラック選択"
+    transcribing: "文字起こし中"
+    embedding: "字幕を埋め込み中"
+    converting: "変換中"
+    completed: "完了"
+    failed: "エラー"
+  actions:
+    pause: "一時停止"
+    resume: "再開"
+    select_track: "トラックを選択"
+    download_srt: "SRTをダウンロード"
+    download_video: "動画をダウンロード"
+    watch_online: "オンラインで視聴"
+    pending_conversion: "保留中"
+    delete: "削除"
+  type:
+    upload: "📁 ファイル"
+    file: "📁 ファイル"
+    url: "🔗 URL"
+    magnet: "🧲 マグネット"
+    torrent: "📦 トレント"
+
+# Settings
+settings:
+  title: "設定"
+  model:
+    label: "認識モデル"
+    hint: "ほとんどのタスクに推奨"
+    descriptions:
+      tiny: "クイックテスト用、低精度"
+      base: "高速だがエラーあり"
+      small: "速度と品質のバランスが良い"
+      medium: "ほとんどのタスクに推奨"
+      large-v2: "最高精度、全言語対応"
+      large-v3-int4: "Whisper V3 (INT4) - 高速、N150向け"
+      large-v3-int8: "Whisper V3 (INT8) - N150推奨"
+      large-v3-fp16: "Whisper V3 (FP16) - 最高精度"
+    speeds:
+      tiny: "リアルタイムの約32倍の速度"
+      base: "リアルタイムの約16倍の速度"
+      small: "リアルタイムの約10倍の速度"
+      medium: "リアルタイムの約5倍の速度"
+      large-v2: "リアルタイムの約3倍の速度"
+  threads:
+    label: "CPUスレッド数"
+    hint: "0 = 自動検出（全コア）"
+    auto: "自動"
+  audio_language:
+    label: "デフォルトの音声言語"
+  interface_language:
+    label: "インターフェース言語"
+  password:
+    title: "パスワードを変更"
+    current: "現在のパスワード"
+    new: "新しいパスワード"
+    submit: "パスワードを変更"
+  save: "設定を保存"
+
+# Track Selection
+tracks:
+  title: "オーディオトラックを選択"
+  apply_to_all: "すべてのファイルに適用"
+  select: "選択"
+  track_n: "トラック {n}"
+  unknown_language: "不明な言語"
+  channels:
+    one: "チャンネル"
+    few: "チャンネル"
+    many: "チャンネル"
+
+# File Selection
+files:
+  title: "ファイルを選択"
+  choose_files: "ダウンロードするファイルを選択："
+  select_all: "すべて選択"
+  deselect_all: "選択解除"
+  download_selected: "選択したものをダウンロード"
+  selected_count: "選択済み: {selected} / {total}"
+  select_at_least_one: "少なくとも1つのファイルを選択してください"
+  no_video_files: "トレントに動画ファイルが見つかりません"
+  loading_files: "ファイルリストを読み込み中..."
+  load_error: "ファイルリストを読み込めませんでした"
+
+# Common
+common:
+  close: "閉じる"
+  cancel: "キャンセル"
+  confirm: "確認"
+  loading: "読み込み中..."
+  error: "エラー"
+  success: "成功"
+
+# File sizes
+size:
+  b: "B"
+  kb: "KB"
+  mb: "MB"
+  gb: "GB"
+
+# Languages for audio
+languages:
+  auto: "Автовизначення"
+  ru: "Русский"
+  en: "English"
+  uk: "Українська"
+  kk: "Қазақша"
+  uz: "Ozbek"
+  ky: "Кыргызча"
+  tg: "Тоҷикӣ"
+  de: "Deutsch"
+  fr: "Français"
+  es: "Español"
+  it: "Italiano"
+  pt: "Português"
+  ja: "日本語"
+  zh: "中文"
+  ko: "한국어"
+  tr: "Türkçe"
+  ar: "العربية"
+  hi: "हिन्दी"
+  pl: "Polski"
+  nl: "Nederlands"
+  sv: "Svenska"
+  da: "Dansk"
+  no: "Norsk"
+  fi: "Suomi"
+  cs: "Čeština"
+  sk: "Slovenčina"
+  hu: "Magyar"
+  ro: "Română"
+  bg: "Български"
+  el: "Ελληνικά"
+  he: "עברית"
+  th: "ไทย"
+  vi: "Tiếng Việt"
+  id: "Bahasa Indonesia"
+  ms: "Bahasa Melayu"
+  be: "Беларуская"
+  az: "Azərbaycan"
+  ka: "ქართული"
+  hy: "Հայադdelays"
+
+# 通知メッセージ
+toast:
+  error:
+    load_settings: "設定の読み込みエラー"
+    save_settings: "設定の保存エラー"
+    change_password: "パスワード変更エラー"
+    load_jobs: "タスクの読み込みエラー"
+    pause: "一時停止エラー"
+    delete: "削除エラー"
+    load_tracks: "トラック情報の読み込みエラー"
+    select_track: "トラック選択エラー"
+    create_job: "タスク作成エラー"
+    upload: "アップロードエラー"
+    network: "ネットワークエラー"
+    select_file: "ファイルを選択してください"
+    enter_url: "URLを入力してください"
+    enter_magnet: "マグネットリンクを入力してください"
+    select_torrent: "トレントファイルを選択してください"
+    no_video_files: "トレントに動画ファイルが見つかりません"
+    load_files: "ファイルリストを読み込めませんでした"
+    select_at_least_one: "少なくとも1つのファイルを選択してください"
+  success:
+    settings_saved: "設定を保存しました"
+    password_changed: "パスワードを変更しました"
+    track_selected: "トラックを選択しました、認識を開始します"
+    all_tracks_selected: "すべてのトラックを選択しました、認識を開始します"
+    job_created: "タスクを作成しました"
+    job_deleted: "タスクを削除しました"
+    download_paused: "ダウンロードを一時停止しました"
+    download_resumed: "ダウンロードを再開しました"
+  info:
+    track_remaining: "トラックを選択しました。残り: {count}"
+    loading_files: "ファイルリストを読み込み中..."
+  login:
+    invalid: "ユーザー名またはパスワードが無効です"

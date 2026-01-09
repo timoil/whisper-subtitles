@@ -1,0 +1,229 @@
+# Portuguese translations / Português
+app:
+  title: "Whisper Subtitles"
+  
+# Navigation
+nav:
+  new_job: "Nova tarefa"
+  tasks: "Tarefas"
+  settings: "Configurações"
+  logout: "Sair"
+
+# Login
+login:
+  title: "Entrar"
+  username: "Nome de usuário"
+  password: "Senha"
+  submit: "Entrar"
+  error: "Credenciais inválidas"
+
+# New Job Form
+job_form:
+  title: "Nova tarefa"
+  tabs:
+    file: "Arquivo"
+    url: "URL"
+    magnet: "Magnet"
+    torrent: "Torrent"
+  file:
+    drag_drop: "Arraste o vídeo aqui"
+    or_click: "ou clique para selecionar"
+  url:
+    label: "URL direta do vídeo"
+    placeholder: "https://example.com/video.mp4"
+  magnet:
+    label: "Link magnet"
+    placeholder: "magnet:?xt=urn:btih:..."
+  torrent:
+    drag_drop: "Arraste o arquivo .torrent"
+  submit: "Iniciar processamento"
+  upload_progress: "Enviando arquivo..."
+
+# Jobs List
+jobs:
+  title: "Tarefas"
+  refresh: "Atualizar"
+  empty: "Nenhuma tarefa ativa"
+  unknown: "Desconhecido"
+  delete_confirm: "Excluir tarefa?"
+  status:
+    pending: "Pendente"
+    downloading: "Baixando"
+    extracting: "Extraindo áudio"
+    awaiting_track: "Seleção de faixa"
+    transcribing: "Transcrevendo"
+    embedding: "Incorporando legendas"
+    converting: "Convertendo"
+    completed: "Concluído"
+    failed: "Erro"
+  actions:
+    pause: "Pausar"
+    resume: "Retomar"
+    select_track: "Selecionar faixa"
+    download_srt: "Baixar SRT"
+    download_video: "Baixar vídeo"
+    watch_online: "Assistir online"
+    pending_conversion: "Pendente"
+    delete: "Excluir"
+  type:
+    upload: "📁 Arquivo"
+    file: "📁 Arquivo"
+    url: "🔗 URL"
+    magnet: "🧲 Magnet"
+    torrent: "📦 Torrent"
+
+# Settings
+settings:
+  title: "Configurações"
+  model:
+    label: "Modelo de reconhecimento"
+    hint: "Recomendado para a maioria das tarefas"
+    descriptions:
+      tiny: "Para testes rápidos, baixa precisão"
+      base: "Rápido mas com erros"
+      small: "Bom equilíbrio velocidade/qualidade"
+      medium: "Recomendado para a maioria das tarefas"
+      large-v2: "Máxima precisão, todos os idiomas"
+      large-v3-int4: "Whisper V3 (INT4) - Rápido, para N150"
+      large-v3-int8: "Whisper V3 (INT8) - Recomendado para N150"
+      large-v3-fp16: "Whisper V3 (FP16) - Máxima precisão"
+    speeds:
+      tiny: "~32x mais rápido que tempo real"
+      base: "~16x mais rápido que tempo real"
+      small: "~10x mais rápido que tempo real"
+      medium: "~5x mais rápido que tempo real"
+      large-v2: "~3x mais rápido que tempo real"
+  threads:
+    label: "Threads de CPU"
+    hint: "0 = detecção automática (todos os núcleos)"
+    auto: "Auto"
+  audio_language:
+    label: "Idioma de áudio padrão"
+  interface_language:
+    label: "Idioma da interface"
+  password:
+    title: "Alterar senha"
+    current: "Senha atual"
+    new: "Nova senha"
+    submit: "Alterar senha"
+  save: "Salvar configurações"
+
+# Track Selection
+tracks:
+  title: "Selecionar faixa de áudio"
+  apply_to_all: "Aplicar a todos os arquivos"
+  select: "Selecionar"
+  track_n: "Faixa {n}"
+  unknown_language: "Idioma desconhecido"
+  channels:
+    one: "canal"
+    few: "canais"
+    many: "canais"
+
+# File Selection
+files:
+  title: "Seleção de arquivos"
+  choose_files: "Escolha os arquivos para baixar:"
+  select_all: "Selecionar tudo"
+  deselect_all: "Desmarcar tudo"
+  download_selected: "Baixar selecionados"
+  selected_count: "Selecionados: {selected} de {total}"
+  select_at_least_one: "Selecione pelo menos um arquivo"
+  no_video_files: "Nenhum arquivo de vídeo encontrado no torrent"
+  loading_files: "Carregando lista de arquivos..."
+  load_error: "Não foi possível carregar a lista de arquivos"
+
+# Common
+common:
+  close: "Fechar"
+  cancel: "Cancelar"
+  confirm: "Confirmar"
+  loading: "Carregando..."
+  error: "Erro"
+  success: "Sucesso"
+
+# File sizes
+size:
+  b: "B"
+  kb: "KB"
+  mb: "MB"
+  gb: "GB"
+
+# Languages for audio
+languages:
+  auto: "Автовизначення"
+  ru: "Русский"
+  en: "English"
+  uk: "Українська"
+  kk: "Қазақша"
+  uz: "Ozbek"
+  ky: "Кыргызча"
+  tg: "Тоҷикӣ"
+  de: "Deutsch"
+  fr: "Français"
+  es: "Español"
+  it: "Italiano"
+  pt: "Português"
+  ja: "日本語"
+  zh: "中文"
+  ko: "한국어"
+  tr: "Türkçe"
+  ar: "العربية"
+  hi: "हिन्दी"
+  pl: "Polski"
+  nl: "Nederlands"
+  sv: "Svenska"
+  da: "Dansk"
+  no: "Norsk"
+  fi: "Suomi"
+  cs: "Čeština"
+  sk: "Slovenčina"
+  hu: "Magyar"
+  ro: "Română"
+  bg: "Български"
+  el: "Ελληνικά"
+  he: "עברית"
+  th: "ไทย"
+  vi: "Tiếng Việt"
+  id: "Bahasa Indonesia"
+  ms: "Bahasa Melayu"
+  be: "Беларуская"
+  az: "Azərbaycan"
+  ka: "ქართული"
+  hy: "Հայադdelays"
+
+# Mensagens de notificação
+toast:
+  error:
+    load_settings: "Erro ao carregar configurações"
+    save_settings: "Erro ao salvar configurações"
+    change_password: "Erro ao alterar senha"
+    load_jobs: "Erro ao carregar tarefas"
+    pause: "Erro ao pausar"
+    delete: "Erro ao excluir"
+    load_tracks: "Erro ao carregar info da faixa"
+    select_track: "Erro ao selecionar faixa"
+    create_job: "Erro ao criar tarefa"
+    upload: "Erro de upload"
+    network: "Erro de rede"
+    select_file: "Por favor, selecione um arquivo"
+    enter_url: "Por favor, insira uma URL"
+    enter_magnet: "Por favor, insira um link magnet"
+    select_torrent: "Por favor, selecione um arquivo torrent"
+    no_video_files: "Nenhum arquivo de vídeo encontrado no torrent"
+    load_files: "Não foi possível carregar a lista de arquivos"
+    select_at_least_one: "Selecione pelo menos um arquivo"
+  success:
+    settings_saved: "Configurações salvas"
+    password_changed: "Senha alterada com sucesso"
+    track_selected: "Faixa selecionada, iniciando reconhecimento"
+    all_tracks_selected: "Todas as faixas selecionadas, iniciando reconhecimento"
+    job_created: "Tarefa criada"
+    job_deleted: "Tarefa excluída"
+    download_paused: "Download pausado"
+    download_resumed: "Download retomado"
+  info:
+    track_remaining: "Faixa selecionada. Restantes: {count}"
+    loading_files: "Carregando lista de arquivos..."
+  login:
+    invalid: "Nome de usuário ou senha inválidos"

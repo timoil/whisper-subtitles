@@ -1,0 +1,229 @@
+# Turkish translations / Türkçe
+app:
+  title: "Whisper Subtitles"
+  
+# Navigation
+nav:
+  new_job: "Yeni Görev"
+  tasks: "Görevler"
+  settings: "Ayarlar"
+  logout: "Çıkış"
+
+# Login
+login:
+  title: "Giriş"
+  username: "Kullanıcı Adı"
+  password: "Şifre"
+  submit: "Giriş Yap"
+  error: "Geçersiz kimlik bilgileri"
+
+# New Job Form
+job_form:
+  title: "Yeni Görev"
+  tabs:
+    file: "Dosya"
+    url: "URL"
+    magnet: "Magnet"
+    torrent: "Torrent"
+  file:
+    drag_drop: "Videoyu buraya sürükleyin"
+    or_click: "veya tıklayarak seçin"
+  url:
+    label: "Doğrudan video URL'si"
+    placeholder: "https://example.com/video.mp4"
+  magnet:
+    label: "Magnet bağlantısı"
+    placeholder: "magnet:?xt=urn:btih:..."
+  torrent:
+    drag_drop: ".torrent dosyasını sürükleyin"
+  submit: "İşlemeyi Başlat"
+  upload_progress: "Dosya yükleniyor..."
+
+# Jobs List
+jobs:
+  title: "Görevler"
+  refresh: "Yenile"
+  empty: "Aktif görev yok"
+  unknown: "Bilinmiyor"
+  delete_confirm: "Görevi silmek istiyor musunuz?"
+  status:
+    pending: "Bekliyor"
+    downloading: "İndiriliyor"
+    extracting: "Ses çıkarılıyor"
+    awaiting_track: "Parça seçimi"
+    transcribing: "Yazıya dönüştürülüyor"
+    embedding: "Altyazı ekleniyor"
+    converting: "Dönüştürülüyor"
+    completed: "Tamamlandı"
+    failed: "Başarısız"
+  actions:
+    pause: "Duraklat"
+    resume: "Devam Et"
+    select_track: "Parça Seç"
+    download_srt: "SRT İndir"
+    download_video: "Video İndir"
+    watch_online: "Çevrimiçi İzle"
+    pending_conversion: "Bekliyor"
+    delete: "Sil"
+  type:
+    upload: "📁 Dosya"
+    file: "📁 Dosya"
+    url: "🔗 URL"
+    magnet: "🧲 Magnet"
+    torrent: "📦 Torrent"
+
+# Settings
+settings:
+  title: "Ayarlar"
+  model:
+    label: "Tanıma Modeli"
+    hint: "Çoğu görev için önerilir"
+    descriptions:
+      tiny: "Hızlı testler için, düşük doğruluk"
+      base: "Hızlı ama hatalar var"
+      small: "Hız ve kalite dengesi iyi"
+      medium: "Çoğu görev için önerilir"
+      large-v2: "Maksimum doğruluk, tüm diller"
+      large-v3-int4: "Whisper V3 (INT4) - Hızlı, N150 için"
+      large-v3-int8: "Whisper V3 (INT8) - N150 için önerilir"
+      large-v3-fp16: "Whisper V3 (FP16) - Maksimum doğruluk"
+    speeds:
+      tiny: "Gerçek zamanlıdan ~32x hızlı"
+      base: "Gerçek zamanlıdan ~16x hızlı"
+      small: "Gerçek zamanlıdan ~10x hızlı"
+      medium: "Gerçek zamanlıdan ~5x hızlı"
+      large-v2: "Gerçek zamanlıdan ~3x hızlı"
+  threads:
+    label: "CPU İş Parçacıkları"
+    hint: "0 = otomatik algıla (tüm çekirdekler)"
+    auto: "Otomatik"
+  audio_language:
+    label: "Varsayılan Ses Dili"
+  interface_language:
+    label: "Arayüz Dili"
+  password:
+    title: "Şifre Değiştir"
+    current: "Mevcut Şifre"
+    new: "Yeni Şifre"
+    submit: "Şifreyi Değiştir"
+  save: "Ayarları Kaydet"
+
+# Track Selection
+tracks:
+  title: "Ses Parçası Seç"
+  apply_to_all: "Tüm dosyalara uygula"
+  select: "Seç"
+  track_n: "Parça {n}"
+  unknown_language: "Bilinmeyen dil"
+  channels:
+    one: "kanal"
+    few: "kanal"
+    many: "kanal"
+
+# File Selection
+files:
+  title: "Dosya Seçimi"
+  choose_files: "İndirilecek dosyaları seçin:"
+  select_all: "Tümünü Seç"
+  deselect_all: "Seçimi Kaldır"
+  download_selected: "Seçilenleri İndir"
+  selected_count: "Seçilen: {selected} / {total}"
+  select_at_least_one: "En az bir dosya seçin"
+  no_video_files: "Torrent'te video dosyası bulunamadı"
+  loading_files: "Dosya listesi yükleniyor..."
+  load_error: "Dosya listesi yüklenemedi"
+
+# Common
+common:
+  close: "Kapat"
+  cancel: "İptal"
+  confirm: "Onayla"
+  loading: "Yükleniyor..."
+  error: "Hata"
+  success: "Başarılı"
+
+# File sizes
+size:
+  b: "B"
+  kb: "KB"
+  mb: "MB"
+  gb: "GB"
+
+# Languages for audio
+languages:
+  auto: "Автовизначення"
+  ru: "Русский"
+  en: "English"
+  uk: "Українська"
+  kk: "Қазақша"
+  uz: "Ozbek"
+  ky: "Кыргызча"
+  tg: "Тоҷикӣ"
+  de: "Deutsch"
+  fr: "Français"
+  es: "Español"
+  it: "Italiano"
+  pt: "Português"
+  ja: "日本語"
+  zh: "中文"
+  ko: "한국어"
+  tr: "Türkçe"
+  ar: "العربية"
+  hi: "हिन्दी"
+  pl: "Polski"
+  nl: "Nederlands"
+  sv: "Svenska"
+  da: "Dansk"
+  no: "Norsk"
+  fi: "Suomi"
+  cs: "Čeština"
+  sk: "Slovenčina"
+  hu: "Magyar"
+  ro: "Română"
+  bg: "Български"
+  el: "Ελληνικά"
+  he: "עברית"
+  th: "ไทย"
+  vi: "Tiếng Việt"
+  id: "Bahasa Indonesia"
+  ms: "Bahasa Melayu"
+  be: "Беларуская"
+  az: "Azərbaycan"
+  ka: "ქართული"
+  hy: "Հայադdelays"
+
+# Bildirim mesajları
+toast:
+  error:
+    load_settings: "Ayarlar yüklenirken hata"
+    save_settings: "Ayarlar kaydedilirken hata"
+    change_password: "Şifre değiştirilirken hata"
+    load_jobs: "Görevler yüklenirken hata"
+    pause: "Duraklatma hatası"
+    delete: "Silme hatası"
+    load_tracks: "Parça bilgisi yüklenirken hata"
+    select_track: "Parça seçimi hatası"
+    create_job: "Görev oluşturma hatası"
+    upload: "Yükleme hatası"
+    network: "Ağ hatası"
+    select_file: "Lütfen bir dosya seçin"
+    enter_url: "Lütfen URL girin"
+    enter_magnet: "Lütfen magnet bağlantısı girin"
+    select_torrent: "Lütfen torrent dosyası seçin"
+    no_video_files: "Torrent'te video dosyası bulunamadı"
+    load_files: "Dosya listesi yüklenemedi"
+    select_at_least_one: "En az bir dosya seçin"
+  success:
+    settings_saved: "Ayarlar kaydedildi"
+    password_changed: "Şifre başarıyla değiştirildi"
+    track_selected: "Parça seçildi, tanıma başlatılıyor"
+    all_tracks_selected: "Tüm parçalar seçildi, tanıma başlatılıyor"
+    job_created: "Görev oluşturuldu"
+    job_deleted: "Görev silindi"
+    download_paused: "İndirme duraklatıldı"
+    download_resumed: "İndirme devam etti"
+  info:
+    track_remaining: "Parça seçildi. Kalan: {count}"
+    loading_files: "Dosya listesi yükleniyor..."
+  login:
+    invalid: "Geçersiz kullanıcı adı veya şifre"

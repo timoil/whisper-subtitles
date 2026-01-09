@@ -1,0 +1,229 @@
+# Chinese translations / 中文
+app:
+  title: "Whisper Subtitles"
+  
+# Navigation
+nav:
+  new_job: "新建任务"
+  tasks: "任务"
+  settings: "设置"
+  logout: "退出"
+
+# Login
+login:
+  title: "登录"
+  username: "用户名"
+  password: "密码"
+  submit: "登录"
+  error: "凭据无效"
+
+# New Job Form
+job_form:
+  title: "新建任务"
+  tabs:
+    file: "文件"
+    url: "链接"
+    magnet: "磁力链"
+    torrent: "种子"
+  file:
+    drag_drop: "将视频拖放到此处"
+    or_click: "或点击选择"
+  url:
+    label: "视频直接链接"
+    placeholder: "https://example.com/video.mp4"
+  magnet:
+    label: "磁力链接"
+    placeholder: "magnet:?xt=urn:btih:..."
+  torrent:
+    drag_drop: "拖放 .torrent 文件"
+  submit: "开始处理"
+  upload_progress: "正在上传文件..."
+
+# Jobs List
+jobs:
+  title: "任务"
+  refresh: "刷新"
+  empty: "没有活动任务"
+  unknown: "未知"
+  delete_confirm: "删除任务？"
+  status:
+    pending: "等待中"
+    downloading: "下载中"
+    extracting: "提取音频"
+    awaiting_track: "选择音轨"
+    transcribing: "转录中"
+    embedding: "嵌入字幕"
+    converting: "转换中"
+    completed: "已完成"
+    failed: "失败"
+  actions:
+    pause: "暂停"
+    resume: "继续"
+    select_track: "选择音轨"
+    download_srt: "下载 SRT"
+    download_video: "下载视频"
+    watch_online: "在线观看"
+    pending_conversion: "等待中"
+    delete: "删除"
+  type:
+    upload: "📁 文件"
+    file: "📁 文件"
+    url: "🔗 链接"
+    magnet: "🧲 磁力链"
+    torrent: "📦 种子"
+
+# Settings
+settings:
+  title: "设置"
+  model:
+    label: "识别模型"
+    hint: "推荐用于大多数任务"
+    descriptions:
+      tiny: "快速测试用，精度低"
+      base: "速度快但有错误"
+      small: "速度和质量平衡良好"
+      medium: "推荐用于大多数任务"
+      large-v2: "最高精度，支持所有语言"
+      large-v3-int4: "Whisper V3 (INT4) - 快速，适用于 N150"
+      large-v3-int8: "Whisper V3 (INT8) - 推荐用于 N150"
+      large-v3-fp16: "Whisper V3 (FP16) - 最高精度"
+    speeds:
+      tiny: "比实时快约32倍"
+      base: "比实时快约16倍"
+      small: "比实时快约10倍"
+      medium: "比实时快约5倍"
+      large-v2: "比实时快约3倍"
+  threads:
+    label: "CPU 线程数"
+    hint: "0 = 自动检测（所有核心）"
+    auto: "自动"
+  audio_language:
+    label: "默认音频语言"
+  interface_language:
+    label: "界面语言"
+  password:
+    title: "更改密码"
+    current: "当前密码"
+    new: "新密码"
+    submit: "更改密码"
+  save: "保存设置"
+
+# Track Selection
+tracks:
+  title: "选择音轨"
+  apply_to_all: "应用于所有文件"
+  select: "选择"
+  track_n: "音轨 {n}"
+  unknown_language: "未知语言"
+  channels:
+    one: "声道"
+    few: "声道"
+    many: "声道"
+
+# File Selection
+files:
+  title: "选择文件"
+  choose_files: "选择要下载的文件："
+  select_all: "全选"
+  deselect_all: "取消全选"
+  download_selected: "下载所选"
+  selected_count: "已选择：{selected} / {total}"
+  select_at_least_one: "请至少选择一个文件"
+  no_video_files: "种子中未找到视频文件"
+  loading_files: "正在加载文件列表..."
+  load_error: "无法加载文件列表"
+
+# Common
+common:
+  close: "关闭"
+  cancel: "取消"
+  confirm: "确认"
+  loading: "加载中..."
+  error: "错误"
+  success: "成功"
+
+# File sizes
+size:
+  b: "B"
+  kb: "KB"
+  mb: "MB"
+  gb: "GB"
+
+# Languages for audio
+languages:
+  auto: "Автовизначення"
+  ru: "Русский"
+  en: "English"
+  uk: "Українська"
+  kk: "Қазақша"
+  uz: "Ozbek"
+  ky: "Кыргызча"
+  tg: "Тоҷикӣ"
+  de: "Deutsch"
+  fr: "Français"
+  es: "Español"
+  it: "Italiano"
+  pt: "Português"
+  ja: "日本語"
+  zh: "中文"
+  ko: "한국어"
+  tr: "Türkçe"
+  ar: "العربية"
+  hi: "हिन्दी"
+  pl: "Polski"
+  nl: "Nederlands"
+  sv: "Svenska"
+  da: "Dansk"
+  no: "Norsk"
+  fi: "Suomi"
+  cs: "Čeština"
+  sk: "Slovenčina"
+  hu: "Magyar"
+  ro: "Română"
+  bg: "Български"
+  el: "Ελληνικά"
+  he: "עברית"
+  th: "ไทย"
+  vi: "Tiếng Việt"
+  id: "Bahasa Indonesia"
+  ms: "Bahasa Melayu"
+  be: "Беларуская"
+  az: "Azərbaycan"
+  ka: "ქართული"
+  hy: "Հայադdelays"
+
+# 通知消息
+toast:
+  error:
+    load_settings: "加载设置时出错"
+    save_settings: "保存设置时出错"
+    change_password: "更改密码时出错"
+    load_jobs: "加载任务时出错"
+    pause: "暂停时出错"
+    delete: "删除时出错"
+    load_tracks: "加载音轨信息时出错"
+    select_track: "选择音轨时出错"
+    create_job: "创建任务时出错"
+    upload: "上传错误"
+    network: "网络错误"
+    select_file: "请选择文件"
+    enter_url: "请输入链接"
+    enter_magnet: "请输入磁力链接"
+    select_torrent: "请选择种子文件"
+    no_video_files: "种子中未找到视频文件"
+    load_files: "无法加载文件列表"
+    select_at_least_one: "请至少选择一个文件"
+  success:
+    settings_saved: "设置已保存"
+    password_changed: "密码已成功更改"
+    track_selected: "音轨已选择，开始识别"
+    all_tracks_selected: "所有音轨已选择，开始识别"
+    job_created: "任务已创建"
+    job_deleted: "任务已删除"
+    download_paused: "下载已暂停"
+    download_resumed: "下载已继续"
+  info:
+    track_remaining: "音轨已选择。剩余：{count}"
+    loading_files: "正在加载文件列表..."
+  login:
+    invalid: "用户名或密码无效"

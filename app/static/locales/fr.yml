@@ -1,0 +1,229 @@
+# French translations / Français
+app:
+  title: "Whisper Subtitles"
+  
+# Navigation
+nav:
+  new_job: "Nouvelle tâche"
+  tasks: "Tâches"
+  settings: "Paramètres"
+  logout: "Déconnexion"
+
+# Login
+login:
+  title: "Connexion"
+  username: "Nom d'utilisateur"
+  password: "Mot de passe"
+  submit: "Se connecter"
+  error: "Identifiants incorrects"
+
+# New Job Form
+job_form:
+  title: "Nouvelle tâche"
+  tabs:
+    file: "Fichier"
+    url: "URL"
+    magnet: "Magnet"
+    torrent: "Torrent"
+  file:
+    drag_drop: "Glissez la vidéo ici"
+    or_click: "ou cliquez pour sélectionner"
+  url:
+    label: "URL directe de la vidéo"
+    placeholder: "https://example.com/video.mp4"
+  magnet:
+    label: "Lien magnet"
+    placeholder: "magnet:?xt=urn:btih:..."
+  torrent:
+    drag_drop: "Glissez le fichier .torrent"
+  submit: "Démarrer le traitement"
+  upload_progress: "Téléchargement du fichier..."
+
+# Jobs List
+jobs:
+  title: "Tâches"
+  refresh: "Actualiser"
+  empty: "Aucune tâche active"
+  unknown: "Inconnu"
+  delete_confirm: "Supprimer la tâche ?"
+  status:
+    pending: "En attente"
+    downloading: "Téléchargement"
+    extracting: "Extraction audio"
+    awaiting_track: "Sélection de piste"
+    transcribing: "Transcription"
+    embedding: "Intégration des sous-titres"
+    converting: "Conversion"
+    completed: "Terminé"
+    failed: "Échec"
+  actions:
+    pause: "Pause"
+    resume: "Reprendre"
+    select_track: "Sélectionner la piste"
+    download_srt: "Télécharger SRT"
+    download_video: "Télécharger la vidéo"
+    watch_online: "Regarder en ligne"
+    pending_conversion: "En attente"
+    delete: "Supprimer"
+  type:
+    upload: "📁 Fichier"
+    file: "📁 Fichier"
+    url: "🔗 URL"
+    magnet: "🧲 Magnet"
+    torrent: "📦 Torrent"
+
+# Settings
+settings:
+  title: "Paramètres"
+  model:
+    label: "Modèle de reconnaissance"
+    hint: "Recommandé pour la plupart des tâches"
+    descriptions:
+      tiny: "Pour tests rapides, faible précision"
+      base: "Rapide mais avec erreurs"
+      small: "Bon équilibre vitesse/qualité"
+      medium: "Recommandé pour la plupart des tâches"
+      large-v2: "Précision maximale, toutes langues"
+      large-v3-int4: "Whisper V3 (INT4) - Rapide, pour N150"
+      large-v3-int8: "Whisper V3 (INT8) - Recommandé pour N150"
+      large-v3-fp16: "Whisper V3 (FP16) - Précision maximale"
+    speeds:
+      tiny: "~32x plus rapide que temps réel"
+      base: "~16x plus rapide que temps réel"
+      small: "~10x plus rapide que temps réel"
+      medium: "~5x plus rapide que temps réel"
+      large-v2: "~3x plus rapide que temps réel"
+  threads:
+    label: "Threads CPU"
+    hint: "0 = détection auto (tous les cœurs)"
+    auto: "Auto"
+  audio_language:
+    label: "Langue audio par défaut"
+  interface_language:
+    label: "Langue de l'interface"
+  password:
+    title: "Changer le mot de passe"
+    current: "Mot de passe actuel"
+    new: "Nouveau mot de passe"
+    submit: "Changer le mot de passe"
+  save: "Enregistrer les paramètres"
+
+# Track Selection
+tracks:
+  title: "Sélectionner la piste audio"
+  apply_to_all: "Appliquer à tous les fichiers"
+  select: "Sélectionner"
+  track_n: "Piste {n}"
+  unknown_language: "Langue inconnue"
+  channels:
+    one: "canal"
+    few: "canaux"
+    many: "canaux"
+
+# File Selection
+files:
+  title: "Sélection des fichiers"
+  choose_files: "Choisissez les fichiers à télécharger :"
+  select_all: "Tout sélectionner"
+  deselect_all: "Tout désélectionner"
+  download_selected: "Télécharger la sélection"
+  selected_count: "Sélectionnés : {selected} sur {total}"
+  select_at_least_one: "Sélectionnez au moins un fichier"
+  no_video_files: "Aucun fichier vidéo trouvé dans le torrent"
+  loading_files: "Chargement de la liste des fichiers..."
+  load_error: "Impossible de charger la liste des fichiers"
+
+# Common
+common:
+  close: "Fermer"
+  cancel: "Annuler"
+  confirm: "Confirmer"
+  loading: "Chargement..."
+  error: "Erreur"
+  success: "Succès"
+
+# File sizes
+size:
+  b: "o"
+  kb: "Ko"
+  mb: "Mo"
+  gb: "Go"
+
+# Languages for audio
+languages:
+  auto: "Автовизначення"
+  ru: "Русский"
+  en: "English"
+  uk: "Українська"
+  kk: "Қазақша"
+  uz: "Ozbek"
+  ky: "Кыргызча"
+  tg: "Тоҷикӣ"
+  de: "Deutsch"
+  fr: "Français"
+  es: "Español"
+  it: "Italiano"
+  pt: "Português"
+  ja: "日本語"
+  zh: "中文"
+  ko: "한국어"
+  tr: "Türkçe"
+  ar: "العربية"
+  hi: "हिन्दी"
+  pl: "Polski"
+  nl: "Nederlands"
+  sv: "Svenska"
+  da: "Dansk"
+  no: "Norsk"
+  fi: "Suomi"
+  cs: "Čeština"
+  sk: "Slovenčina"
+  hu: "Magyar"
+  ro: "Română"
+  bg: "Български"
+  el: "Ελληνικά"
+  he: "עברית"
+  th: "ไทย"
+  vi: "Tiếng Việt"
+  id: "Bahasa Indonesia"
+  ms: "Bahasa Melayu"
+  be: "Беларуская"
+  az: "Azərbaycan"
+  ka: "ქართული"
+  hy: "Հայադdelays"
+
+# Messages de notification
+toast:
+  error:
+    load_settings: "Erreur de chargement des paramètres"
+    save_settings: "Erreur de sauvegarde des paramètres"
+    change_password: "Erreur de changement de mot de passe"
+    load_jobs: "Erreur de chargement des tâches"
+    pause: "Erreur de mise en pause"
+    delete: "Erreur de suppression"
+    load_tracks: "Erreur de chargement des infos de piste"
+    select_track: "Erreur de sélection de piste"
+    create_job: "Erreur de création de tâche"
+    upload: "Erreur de téléchargement"
+    network: "Erreur réseau"
+    select_file: "Veuillez sélectionner un fichier"
+    enter_url: "Veuillez entrer une URL"
+    enter_magnet: "Veuillez entrer un lien magnet"
+    select_torrent: "Veuillez sélectionner un fichier torrent"
+    no_video_files: "Aucun fichier vidéo trouvé dans le torrent"
+    load_files: "Impossible de charger la liste des fichiers"
+    select_at_least_one: "Sélectionnez au moins un fichier"
+  success:
+    settings_saved: "Paramètres enregistrés"
+    password_changed: "Mot de passe changé avec succès"
+    track_selected: "Piste sélectionnée, démarrage de la reconnaissance"
+    all_tracks_selected: "Toutes les pistes sélectionnées, démarrage de la reconnaissance"
+    job_created: "Tâche créée"
+    job_deleted: "Tâche supprimée"
+    download_paused: "Téléchargement en pause"
+    download_resumed: "Téléchargement repris"
+  info:
+    track_remaining: "Piste sélectionnée. Restant : {count}"
+    loading_files: "Chargement de la liste des fichiers..."
+  login:
+    invalid: "Nom d'utilisateur ou mot de passe incorrect"

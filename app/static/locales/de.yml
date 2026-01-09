@@ -1,0 +1,229 @@
+# German translations / Deutsch
+app:
+  title: "Whisper Subtitles"
+  
+# Navigation
+nav:
+  new_job: "Neuer Auftrag"
+  tasks: "Aufgaben"
+  settings: "Einstellungen"
+  logout: "Abmelden"
+
+# Login
+login:
+  title: "Anmeldung"
+  username: "Benutzername"
+  password: "Passwort"
+  submit: "Anmelden"
+  error: "Ungültige Anmeldedaten"
+
+# New Job Form
+job_form:
+  title: "Neuer Auftrag"
+  tabs:
+    file: "Datei"
+    url: "URL"
+    magnet: "Magnet"
+    torrent: "Torrent"
+  file:
+    drag_drop: "Video hierher ziehen"
+    or_click: "oder klicken zum Auswählen"
+  url:
+    label: "Direkte Video-URL"
+    placeholder: "https://example.com/video.mp4"
+  magnet:
+    label: "Magnet-Link"
+    placeholder: "magnet:?xt=urn:btih:..."
+  torrent:
+    drag_drop: ".torrent-Datei hierher ziehen"
+  submit: "Verarbeitung starten"
+  upload_progress: "Datei wird hochgeladen..."
+
+# Jobs List
+jobs:
+  title: "Aufgaben"
+  refresh: "Aktualisieren"
+  empty: "Keine aktiven Aufgaben"
+  unknown: "Unbekannt"
+  delete_confirm: "Aufgabe löschen?"
+  status:
+    pending: "Ausstehend"
+    downloading: "Wird heruntergeladen"
+    extracting: "Audio wird extrahiert"
+    awaiting_track: "Spurauswahl"
+    transcribing: "Transkription"
+    embedding: "Untertitel einbetten"
+    converting: "Konvertierung"
+    completed: "Abgeschlossen"
+    failed: "Fehlgeschlagen"
+  actions:
+    pause: "Pausieren"
+    resume: "Fortsetzen"
+    select_track: "Spur auswählen"
+    download_srt: "SRT herunterladen"
+    download_video: "Video herunterladen"
+    watch_online: "Online ansehen"
+    pending_conversion: "Ausstehend"
+    delete: "Löschen"
+  type:
+    upload: "📁 Datei"
+    file: "📁 Datei"
+    url: "🔗 URL"
+    magnet: "🧲 Magnet"
+    torrent: "📦 Torrent"
+
+# Settings
+settings:
+  title: "Einstellungen"
+  model:
+    label: "Erkennungsmodell"
+    hint: "Empfohlen für die meisten Aufgaben"
+    descriptions:
+      tiny: "Für schnelle Tests, geringe Genauigkeit"
+      base: "Schnell, aber mit Fehlern"
+      small: "Gute Balance zwischen Geschwindigkeit und Qualität"
+      medium: "Empfohlen für die meisten Aufgaben"
+      large-v2: "Maximale Genauigkeit, alle Sprachen"
+      large-v3-int4: "Whisper V3 (INT4) - Schnell, für N150"
+      large-v3-int8: "Whisper V3 (INT8) - Empfohlen für N150"
+      large-v3-fp16: "Whisper V3 (FP16) - Maximale Genauigkeit"
+    speeds:
+      tiny: "~32x schneller als Echtzeit"
+      base: "~16x schneller als Echtzeit"
+      small: "~10x schneller als Echtzeit"
+      medium: "~5x schneller als Echtzeit"
+      large-v2: "~3x schneller als Echtzeit"
+  threads:
+    label: "CPU-Threads"
+    hint: "0 = automatisch erkennen (alle Kerne)"
+    auto: "Auto"
+  audio_language:
+    label: "Standard-Audiosprache"
+  interface_language:
+    label: "Oberflächensprache"
+  password:
+    title: "Passwort ändern"
+    current: "Aktuelles Passwort"
+    new: "Neues Passwort"
+    submit: "Passwort ändern"
+  save: "Einstellungen speichern"
+
+# Track Selection
+tracks:
+  title: "Audiospur auswählen"
+  apply_to_all: "Auf alle Dateien anwenden"
+  select: "Auswählen"
+  track_n: "Spur {n}"
+  unknown_language: "Unbekannte Sprache"
+  channels:
+    one: "Kanal"
+    few: "Kanäle"
+    many: "Kanäle"
+
+# File Selection
+files:
+  title: "Dateien auswählen"
+  choose_files: "Dateien zum Herunterladen auswählen:"
+  select_all: "Alle auswählen"
+  deselect_all: "Auswahl aufheben"
+  download_selected: "Ausgewählte herunterladen"
+  selected_count: "Ausgewählt: {selected} von {total}"
+  select_at_least_one: "Mindestens eine Datei auswählen"
+  no_video_files: "Keine Videodateien im Torrent gefunden"
+  loading_files: "Dateiliste wird geladen..."
+  load_error: "Dateiliste konnte nicht geladen werden"
+
+# Common
+common:
+  close: "Schließen"
+  cancel: "Abbrechen"
+  confirm: "Bestätigen"
+  loading: "Wird geladen..."
+  error: "Fehler"
+  success: "Erfolgreich"
+
+# File sizes
+size:
+  b: "B"
+  kb: "KB"
+  mb: "MB"
+  gb: "GB"
+
+# Languages for audio
+languages:
+  auto: "Автовизначення"
+  ru: "Русский"
+  en: "English"
+  uk: "Українська"
+  kk: "Қазақша"
+  uz: "Ozbek"
+  ky: "Кыргызча"
+  tg: "Тоҷикӣ"
+  de: "Deutsch"
+  fr: "Français"
+  es: "Español"
+  it: "Italiano"
+  pt: "Português"
+  ja: "日本語"
+  zh: "中文"
+  ko: "한국어"
+  tr: "Türkçe"
+  ar: "العربية"
+  hi: "हिन्दी"
+  pl: "Polski"
+  nl: "Nederlands"
+  sv: "Svenska"
+  da: "Dansk"
+  no: "Norsk"
+  fi: "Suomi"
+  cs: "Čeština"
+  sk: "Slovenčina"
+  hu: "Magyar"
+  ro: "Română"
+  bg: "Български"
+  el: "Ελληνικά"
+  he: "עברית"
+  th: "ไทย"
+  vi: "Tiếng Việt"
+  id: "Bahasa Indonesia"
+  ms: "Bahasa Melayu"
+  be: "Беларуская"
+  az: "Azərbaycan"
+  ka: "ქართული"
+  hy: "Հայադdelays"
+
+# Benachrichtigungen
+toast:
+  error:
+    load_settings: "Fehler beim Laden der Einstellungen"
+    save_settings: "Fehler beim Speichern der Einstellungen"
+    change_password: "Fehler beim Ändern des Passworts"
+    load_jobs: "Fehler beim Laden der Aufgaben"
+    pause: "Fehler beim Pausieren"
+    delete: "Fehler beim Löschen"
+    load_tracks: "Fehler beim Laden der Spurinformationen"
+    select_track: "Fehler bei der Spurauswahl"
+    create_job: "Fehler beim Erstellen der Aufgabe"
+    upload: "Upload-Fehler"
+    network: "Netzwerkfehler"
+    select_file: "Bitte wählen Sie eine Datei"
+    enter_url: "Bitte geben Sie eine URL ein"
+    enter_magnet: "Bitte geben Sie einen Magnet-Link ein"
+    select_torrent: "Bitte wählen Sie eine Torrent-Datei"
+    no_video_files: "Keine Videodateien im Torrent gefunden"
+    load_files: "Dateiliste konnte nicht geladen werden"
+    select_at_least_one: "Wählen Sie mindestens eine Datei"
+  success:
+    settings_saved: "Einstellungen gespeichert"
+    password_changed: "Passwort erfolgreich geändert"
+    track_selected: "Spur ausgewählt, starte Erkennung"
+    all_tracks_selected: "Alle Spuren ausgewählt, starte Erkennung"
+    job_created: "Aufgabe erstellt"
+    job_deleted: "Aufgabe gelöscht"
+    download_paused: "Download pausiert"
+    download_resumed: "Download fortgesetzt"
+  info:
+    track_remaining: "Spur ausgewählt. Verbleibend: {count}"
+    loading_files: "Dateiliste wird geladen..."
+  login:
+    invalid: "Ungültiger Benutzername oder Passwort"

@@ -1,0 +1,21 @@
+services:
+  whisper:
+    build: .
+    container_name: whisper-subtitles
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - SECRET_KEY=${SECRET_KEY:-change-me-in-production}
+      - DEFAULT_MODEL=${DEFAULT_MODEL:-large-v3-int8} # Options: tiny, base, small, medium, large-v2, large-v3, large-v3-turbo, large-v3-int4, large-v3-int8, large-v3-fp16
+      - CPU_THREADS=${CPU_THREADS:-4}
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8000/api/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3

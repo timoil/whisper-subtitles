@@ -1,0 +1,229 @@
+# English translations
+app:
+  title: "Whisper Subtitles"
+  
+# Navigation
+nav:
+  new_job: "New Job"
+  tasks: "Tasks"
+  settings: "Settings"
+  logout: "Logout"
+
+# Login
+login:
+  title: "Login"
+  username: "Username"
+  password: "Password"
+  submit: "Sign In"
+  error: "Invalid credentials"
+
+# New Job Form
+job_form:
+  title: "New Job"
+  tabs:
+    file: "File"
+    url: "URL"
+    magnet: "Magnet"
+    torrent: "Torrent"
+  file:
+    drag_drop: "Drag and drop video here"
+    or_click: "or click to select"
+  url:
+    label: "Direct video URL"
+    placeholder: "https://example.com/video.mp4"
+  magnet:
+    label: "Magnet link"
+    placeholder: "magnet:?xt=urn:btih:..."
+  torrent:
+    drag_drop: "Drag and drop .torrent file"
+  submit: "Start Processing"
+  upload_progress: "Uploading file..."
+
+# Jobs List
+jobs:
+  title: "Tasks"
+  refresh: "Refresh"
+  empty: "No active tasks"
+  unknown: "Unknown"
+  delete_confirm: "Delete task?"
+  status:
+    pending: "Pending"
+    downloading: "Downloading"
+    extracting: "Extracting audio"
+    awaiting_track: "Track selection"
+    transcribing: "Transcribing"
+    embedding: "Embedding subtitles"
+    converting: "Converting"
+    completed: "Completed"
+    failed: "Failed"
+  actions:
+    pause: "Pause"
+    resume: "Resume"
+    select_track: "Select track"
+    download_srt: "Download SRT"
+    download_video: "Download Video"
+    watch_online: "Watch Online"
+    pending_conversion: "Pending"
+    delete: "Delete"
+  type:
+    upload: "📁 File"
+    file: "📁 File"
+    url: "🔗 URL"
+    magnet: "🧲 Magnet"
+    torrent: "📦 Torrent"
+
+# Settings
+settings:
+  title: "Settings"
+  model:
+    label: "Recognition Model"
+    hint: "Recommended for most tasks"
+    descriptions:
+      tiny: "For quick tests, low accuracy"
+      base: "Fast but with errors"
+      small: "Good balance of speed and quality"
+      medium: "Recommended for most tasks"
+      large-v2: "Maximum accuracy, all languages"
+      large-v3-int4: "Whisper V3 (INT4) - Fastest (N150 Optimized)"
+      large-v3-int8: "Whisper V3 (INT8) - Recommended for N150"
+      large-v3-fp16: "Whisper V3 (FP16) - Maximum accuracy"
+    speeds:
+      tiny: "~32x faster than realtime"
+      base: "~16x faster than realtime"
+      small: "~10x faster than realtime"
+      medium: "~5x faster than realtime"
+      large-v2: "~3x faster than realtime"
+  threads:
+    label: "CPU Threads"
+    hint: "0 = auto-detect (all cores)"
+    auto: "Auto"
+  audio_language:
+    label: "Default Audio Language"
+  interface_language:
+    label: "Interface Language"
+  password:
+    title: "Change Password"
+    current: "Current Password"
+    new: "New Password"
+    submit: "Change Password"
+  save: "Save Settings"
+
+# Track Selection
+tracks:
+  title: "Select Audio Track"
+  apply_to_all: "Apply to all files"
+  select: "Select"
+  track_n: "Track {n}"
+  unknown_language: "Unknown language"
+  channels:
+    one: "channel"
+    few: "channels"
+    many: "channels"
+
+# File Selection
+files:
+  title: "Select Files"
+  choose_files: "Choose files to download:"
+  select_all: "Select all"
+  deselect_all: "Deselect all"
+  download_selected: "Download selected"
+  selected_count: "Selected: {selected} of {total}"
+  select_at_least_one: "Select at least one file"
+  no_video_files: "No video files found in torrent"
+  loading_files: "Loading file list..."
+  load_error: "Failed to load file list"
+
+# Common
+common:
+  close: "Close"
+  cancel: "Cancel"
+  confirm: "Confirm"
+  loading: "Loading..."
+  error: "Error"
+  success: "Success"
+
+# File sizes
+size:
+  b: "B"
+  kb: "KB"
+  mb: "MB"
+  gb: "GB"
+
+# Languages for audio
+languages:
+  auto: "Auto-detect"
+  ru: "Русский"
+  en: "English"
+  uk: "Українська"
+  kk: "Қазақша"
+  uz: "O'zbek"
+  ky: "Кыргызча"
+  tg: "Тоҷикӣ"
+  de: "Deutsch"
+  fr: "Français"
+  es: "Español"
+  it: "Italiano"
+  pt: "Português"
+  ja: "日本語"
+  zh: "中文"
+  ko: "한국어"
+  tr: "Türkçe"
+  ar: "العربية"
+  hi: "हिन्दी"
+  pl: "Polski"
+  nl: "Nederlands"
+  sv: "Svenska"
+  da: "Dansk"
+  no: "Norsk"
+  fi: "Suomi"
+  cs: "Čeština"
+  sk: "Slovenčina"
+  hu: "Magyar"
+  ro: "Română"
+  bg: "Български"
+  el: "Ελληνικά"
+  he: "עברית"
+  th: "ไทย"
+  vi: "Tiếng Việt"
+  id: "Bahasa Indonesia"
+  ms: "Bahasa Melayu"
+  be: "Беларуская"
+  az: "Azərbaycan"
+  ka: "ქარdelaylი"
+  hy: "Հայdelays"
+
+# Toast messages
+toast:
+  error:
+    load_settings: "Error loading settings"
+    save_settings: "Error saving settings"
+    change_password: "Error changing password"
+    load_jobs: "Error loading tasks"
+    pause: "Error pausing"
+    delete: "Error deleting"
+    load_tracks: "Error loading track info"
+    select_track: "Error selecting track"
+    create_job: "Error creating task"
+    upload: "Upload error"
+    network: "Network error"
+    select_file: "Please select a file"
+    enter_url: "Please enter URL"
+    enter_magnet: "Please enter magnet link"
+    select_torrent: "Please select torrent file"
+    no_video_files: "No video files found in torrent"
+    load_files: "Failed to load file list"
+    select_at_least_one: "Select at least one file"
+  success:
+    settings_saved: "Settings saved"
+    password_changed: "Password changed successfully"
+    track_selected: "Track selected, starting recognition"
+    all_tracks_selected: "All tracks selected, starting recognition"
+    job_created: "Task created"
+    job_deleted: "Task deleted"
+    download_paused: "Download paused"
+    download_resumed: "Download resumed"
+  info:
+    track_remaining: "Track selected for file. Remaining: {count}"
+    loading_files: "Loading file list..."
+  login:
+    invalid: "Invalid username or password"

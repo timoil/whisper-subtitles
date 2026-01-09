@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper Subtitle Generator</title>
+    <meta name="description" content="Generate subtitles from video files using AI">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="/static/i18n.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Login Screen -->
+        <div id="login-screen" class="screen">
+            <div class="login-container">
+                <div class="logo">
+                    <div class="logo-icon">🎬</div>
+                    <h1>Whisper Subtitles</h1>
+                    <p>AI-powered subtitle generator</p>
+                </div>
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="username" data-i18n="login.username">Username</label>
+                        <input type="text" id="username" name="username" value="admin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" data-i18n="login.password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="login.submit">Sign In</button>
+                    <p id="login-error" class="error-text"></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Main Dashboard -->
+        <div id="dashboard" class="screen hidden">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="logo-small">🎬</div>
+                    <h1>Whisper Subtitles</h1>
+                </div>
+                <div class="header-right">
+                    <button id="btn-settings" class="btn btn-icon" data-i18n-title="nav.settings"
+                        title="Settings">⚙️</button>
+                    <button id="btn-logout" class="btn btn-icon" data-i18n-title="nav.logout" title="Logout">🚪</button>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- New Job Section -->
+                <section class="new-job-section">
+                    <h2 data-i18n="job_form.title">New Job</h2>
+                    <div class="job-tabs">
+                        <button class="tab-btn active" data-tab="upload">📁 <span
+                                data-i18n="job_form.tabs.file">File</span></button>
+                        <button class="tab-btn" data-tab="url">🔗 <span
+                                data-i18n="job_form.tabs.url">URL</span></button>
+                        <button class="tab-btn" data-tab="magnet">🧲 <span
+                                data-i18n="job_form.tabs.magnet">Magnet</span></button>
+                        <button class="tab-btn" data-tab="torrent">📦 <span
+                                data-i18n="job_form.tabs.torrent">Torrent</span></button>
+                    </div>
+
+                    <form id="job-form" class="job-form">
+                        <!-- Upload Tab -->
+                        <div id="tab-upload" class="tab-content active">
+                            <div class="drop-zone" id="drop-zone">
+                                <div class="drop-zone-content">
+                                    <span class="drop-icon">📁</span>
+                                    <p data-i18n="job_form.file.drag_drop">Drag and drop video here</p>
+                                    <p class="text-muted" data-i18n="job_form.file.or_click">or click to select</p>
+                                </div>
+                                <input type="file" id="file-input" accept="video/*,.mkv,.mp4,.avi,.mov,.webm" hidden>
+                            </div>
+                            <p id="selected-file" class="selected-file"></p>
+                        </div>
+
+                        <!-- URL Tab -->
+                        <div id="tab-url" class="tab-content">
+                            <div class="form-group">
+                                <label for="url-input" data-i18n="job_form.url.label">Direct video URL</label>
+                                <input type="url" id="url-input" placeholder="https://example.com/video.mp4">
+                            </div>
+                        </div>
+
+                        <!-- Magnet Tab -->
+                        <div id="tab-magnet" class="tab-content">
+                            <div class="form-group">
+                                <label for="magnet-input" data-i18n="job_form.magnet.label">Magnet link</label>
+                                <input type="text" id="magnet-input" placeholder="magnet:?xt=urn:btih:...">
+                            </div>
+                        </div>
+
+                        <!-- Torrent Tab -->
+                        <div id="tab-torrent" class="tab-content">
+                            <div class="drop-zone" id="torrent-drop-zone">
+                                <div class="drop-zone-content">
+                                    <span class="drop-icon">📦</span>
+                                    <p data-i18n="job_form.torrent.drag_drop">Drag and drop .torrent file</p>
+                                </div>
+                                <input type="file" id="torrent-input" accept=".torrent" hidden>
+                            </div>
+                            <p id="selected-torrent" class="selected-file"></p>
+                        </div>
+
+                        <!-- Upload Progress -->
+                        <div id="upload-progress" class="upload-progress" style="display: none;">
+                            <div class="upload-progress-header">
+                                <span id="upload-filename" data-i18n="job_form.upload_progress">Uploading file...</span>
+                                <span id="upload-percent">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-bar-fill" id="upload-progress-bar" style="width: 0%"></div>
+                            </div>
+                            <div class="upload-progress-info">
+                                <span id="upload-loaded">0 MB</span> / <span id="upload-total">0 MB</span>
+                                <span id="upload-speed"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 20px;">
+                            <span>🚀</span> <span data-i18n="job_form.submit">Start Processing</span>
+                        </button>
+                    </form>
+                </section>
+
+                <!-- Jobs List -->
+                <section class="jobs-section">
+                    <div class="jobs-header">
+                        <h2 data-i18n="jobs.title">Tasks</h2>
+                        <button id="btn-refresh" class="btn btn-icon" data-i18n-title="jobs.refresh"
+                            title="Refresh">🔄</button>
+                    </div>
+                    <div id="jobs-list" class="jobs-list">
+                        <div class="empty-state">
+                            <span>📭</span>
+                            <p data-i18n="jobs.empty">No active tasks</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Settings Modal -->
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2><span></span>⚙️</span> <span data-i18n="settings.title">Settings</span></h2>
+                    <button class="btn btn-icon modal-close">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="settings-section">
+                        <h3 data-i18n="settings.model.label">Recognition Model</h3>
+                        <select id="setting-model" class="form-select">
+                            <!-- Options will be populated dynamically -->
+                        </select>
+                        <p id="model-description" class="text-muted model-desc"></p>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 data-i18n="settings.threads.label">CPU Threads</h3>
+                        <div class="threads-input">
+                            <input type="range" id="setting-threads" min="1" max="16" value="4">
+                            <span id="threads-value">4</span>
+                        </div>
+                        <p class="text-muted" data-i18n="settings.threads.hint">0 = auto-detect (all cores)</p>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 data-i18n="settings.interface_language.label">Interface Language</h3>
+                        <select id="setting-interface-language" class="form-select">
+                            <option value="ru">Русский</option>
+                            <option value="en">English</option>
+                            <option value="uk">Українська</option>
+                            <option value="kk">Қазақша</option>
+                            <option value="de">Deutsch</option>
+                            <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="it">Italiano</option>
+                            <option value="pt">Português</option>
+                            <option value="ja">日本語</option>
+                            <option value="zh">中文</option>
+                            <option value="ko">한국어</option>
+                            <option value="tr">Türkçe</option>
+                            <option value="ar">العربية</option>
+                            <option value="hi">हिन्दी</option>
+                        </select>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 data-i18n="settings.audio_language.label">Default Audio Language</h3>
+                        <select id="setting-language" class="form-select">
+                            <option value="auto">Auto-detect</option>
+                            <option value="ru">Русский</option>
+                            <option value="en">English</option>
+                            <option value="uk">Українська</option>
+                            <option value="kk">Қазақша</option>
+                            <option value="uz">O'zbek</option>
+                            <option value="ky">Кыргызча</option>
+                            <option value="tg">Тоҷикӣ</option>
+                            <option value="de">Deutsch</option>
+                            <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="it">Italiano</option>
+                            <option value="pt">Português</option>
+                            <option value="ja">日本語</option>
+                            <option value="zh">中文</option>
+                            <option value="ko">한국어</option>
+                            <option value="tr">Türkçe</option>
+                            <option value="ar">العربية</option>
+                            <option value="hi">हिन्दी</option>
+                            <option value="pl">Polski</option>
+                            <option value="nl">Nederlands</option>
+                            <option value="sv">Svenska</option>
+                            <option value="da">Dansk</option>
+                            <option value="no">Norsk</option>
+                            <option value="fi">Suomi</option>
+                            <option value="cs">Čeština</option>
+                            <option value="sk">Slovenčina</option>
+                            <option value="hu">Magyar</option>
+                            <option value="ro">Română</option>
+                            <option value="bg">Български</option>
+                            <option value="el">Ελληνικά</option>
+                            <option value="he">עברית</option>
+                            <option value="th">ไทย</option>
+                            <option value="vi">Tiếng Việt</option>
+                            <option value="id">Bahasa Indonesia</option>
+                            <option value="ms">Bahasa Melayu</option>
+                            <option value="be">Беларуская</option>
+                            <option value="az">Azərbaycan</option>
+                            <option value="ka">ქართული</option>
+                            <option value="hy">Հայերdelays</option>
+                        </select>
+                    </div>
+
+                    <hr>
+
+                    <div class="settings-section">
+                        <h3 data-i18n="settings.password.title">Change Password</h3>
+                        <form id="password-form">
+                            <div class="form-group">
+                                <label data-i18n="settings.password.current">Current Password</label>
+                                <input type="password" id="current-password" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="settings.password.new">New Password</label>
+                                <input type="password" id="new-password" required>
+                            </div>
+                            <button type="submit" class="btn btn-secondary" data-i18n="settings.password.submit">Change
+                                Password</button>
+                            <p id="password-message" class="message"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="save-settings" class="btn btn-primary" data-i18n="settings.save">Save Settings</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Track Selection Modal -->
+        <div id="track-modal" class="modal hidden">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>🎵 <span data-i18n="tracks.title">Select Audio Track</span></h2>
+                    <button class="btn btn-icon modal-close">✕</button>
+                </div>
+                <div class="modal-body">
+                    <p id="track-file-name" class="track-file-name"></p>
+                    <div id="track-list" class="track-list">
+                        <!-- Tracks will be populated dynamically -->
+                    </div>
+                    <label class="checkbox-label" id="apply-all-container">
+                        <input type="checkbox" id="apply-to-all">
+                        <span data-i18n="tracks.apply_to_all">Apply to all files</span>
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button id="confirm-track" class="btn btn-primary" disabled
+                        data-i18n="tracks.select">Select</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- File Selection Modal (for torrents) -->
+        <div id="file-select-modal" class="modal hidden">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content" style="max-width: 600px;">
+                <div class="modal-header">
+                    <h2>📦 <span data-i18n="files.title">Select Files</span></h2>
+                    <button class="btn btn-icon modal-close">✕</button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted" style="margin-bottom: 16px;" data-i18n="files.choose_files">Choose files to
+                        download:</p>
+                    <div class="file-select-controls" style="display: flex; gap: 12px; margin-bottom: 16px;">
+                        <button type="button" class="btn btn-secondary btn-sm" id="select-all-files">✓ <span
+                                data-i18n="files.select_all">Select all</span></button>
+                        <button type="button" class="btn btn-secondary btn-sm" id="deselect-all-files">✗ <span
+                                data-i18n="files.deselect_all">Deselect all</span></button>
+                        <span id="selected-count" class="text-muted" style="margin-left: auto;"></span>
+                    </div>
+                    <div id="file-list" class="file-list" style="max-height: 400px; overflow-y: auto;">
+                        <!-- Files will be populated dynamically -->
+                    </div>
+                    <p id="total-size" class="text-muted" style="margin-top: 12px;"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modal-close"
+                        data-i18n="common.cancel">Cancel</button>
+                    <button id="confirm-files" class="btn btn-primary" data-i18n="files.download_selected">Download
+                        selected</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Open Source Footer -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <span class="footer-text">
+                    🔓 Open Source • Non-Commercial Use Only
+                </span>
+                <button type="button" class="footer-link" id="show-licenses">
+                    View Licenses & Credits
+                </button>
+            </div>
+        </footer>
+
+        <!-- License Modal -->
+        <div id="license-modal" class="modal hidden">
+            <div class="modal-content license-modal-content">
+                <div class="modal-header">
+                    <h2>Open Source Licenses & Credits</h2>
+                    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body license-body">
+                    <div class="license-section">
+                        <h3>⚠️ License Notice</h3>
+                        <p>This software is provided for <strong>non-commercial use only</strong>.
+                            Commercial use is prohibited without explicit permission.</p>
+                    </div>
+
+                    <div class="license-section">
+                        <h3>🤖 AI & Core Components</h3>
+                        <ul class="license-list">
+                            <li>
+                                <strong>OpenAI Whisper</strong> - MIT License
+                                <br><small>Speech recognition model by OpenAI</small>
+                            </li>
+                            <li>
+                                <strong>OpenVINO™ Toolkit</strong> - Apache 2.0 License
+                                <br><small>Intel's toolkit for optimized deep learning inference</small>
+                            </li>
+                            <li>
+                                <strong>OpenVINO GenAI</strong> - Apache 2.0 License
+                                <br><small>Generative AI extension for OpenVINO</small>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="license-section">
+                        <h3>🛠️ Media Processing</h3>
+                        <ul class="license-list">
+                            <li>
+                                <strong>FFmpeg</strong> - LGPL 2.1+ / GPL 2+
+                                <br><small>Multimedia framework for audio/video processing</small>
+                            </li>
+                            <li>
+                                <strong>aria2</strong> - GPL 2.0
+                                <br><small>Lightweight multi-protocol download utility</small>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="license-section">
+                        <h3>🐍 Python Libraries</h3>
+                        <ul class="license-list">
+                            <li><strong>FastAPI</strong> - MIT License</li>
+                            <li><strong>Uvicorn</strong> - BSD License</li>
+                            <li><strong>Pydantic</strong> - MIT License</li>
+                            <li><strong>aiosqlite</strong> - MIT License</li>
+                            <li><strong>librosa</strong> - ISC License</li>
+                            <li><strong>huggingface_hub</strong> - Apache 2.0 License</li>
+                        </ul>
+                    </div>
+
+                    <div class="license-section">
+                        <h3>🎨 Frontend</h3>
+                        <ul class="license-list">
+                            <li><strong>Inter Font</strong> - SIL Open Font License</li>
+                            <li><strong>HLS.js</strong> - Apache 2.0 License</li>
+                        </ul>
+                    </div>
+
+                    <div class="license-section copyright">
+                        <p>© 2026 Whisper Subtitles Project Contributors</p>
+                        <p>Built with ❤️ using open source software</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary modal-close">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Player Modal -->
+        <div id="video-modal" class="modal hidden">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content video-modal-content">
+                <div class="modal-header">
+                    <h2>▶️ <span id="video-title" data-i18n="player.title">Video Player</span></h2>
+                    <button class="btn btn-icon modal-close" id="close-video-modal">✕</button>
+                </div>
+                <div class="modal-body video-modal-body">
+                    <video id="video-player" controls crossorigin="anonymous">
+                        <track id="video-subtitles" kind="subtitles" label="Русский (AI)" srclang="ru" default>
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toast-container" class="toast-container"></div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
