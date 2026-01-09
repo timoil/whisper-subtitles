@@ -82,14 +82,14 @@
 <details>
 <summary><b>▶️ Обработка одного видео</b></summary>
 
-https://github.com/user-attachments/assets/one_video.mp4
+https://github.com/user-attachments/assets/de31e0c5-0e7d-4589-b4dc-f57ddbaa9616
 
 </details>
 
 <details>
 <summary><b>🔗 Загрузка торрента (полный процесс)</b></summary>
 
-https://github.com/user-attachments/assets/torrent_full.mp4
+https://github.com/user-attachments/assets/69f2dcfc-6609-4928-b92a-af08f5303b90
 
 </details>
 
@@ -302,14 +302,14 @@ The application uses the cutting-edge **OpenAI Whisper** neural network, optimiz
 <details>
 <summary><b>▶️ Processing a single video</b></summary>
 
-https://github.com/user-attachments/assets/one_video.mp4
+https://github.com/user-attachments/assets/de31e0c5-0e7d-4589-b4dc-f57ddbaa9616
 
 </details>
 
 <details>
 <summary><b>🔗 Torrent download (full process)</b></summary>
 
-https://github.com/user-attachments/assets/torrent_full.mp4
+https://github.com/user-attachments/assets/69f2dcfc-6609-4928-b92a-af08f5303b90
 
 </details>
 
