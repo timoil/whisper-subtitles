@@ -58,7 +58,7 @@
 
 - 🎯 **Автоматическое распознавание речи** — поддержка 99 языков
 - 📁 **Множество источников** — загрузка видео, URL, магнет-ссылки, торренты
-- � **Любые форматы видео** — MKV, MP4, AVI, MOV, WebM и другие
+- 🎬 **Любые форматы видео** — MKV, MP4, AVI, MOV, WebM и другие
 - 🎵 **Выбор аудиодорожки** — возможность выбрать нужную дорожку при обработке
 - 📦 **Выборочная загрузка** — в торрентах можно выбрать только нужные серии/файлы
 - ▶️ **Онлайн просмотр** — смотрите обработанные видео прямо в браузере
@@ -67,6 +67,50 @@
 - 🎨 **Современный интерфейс** — адаптивный дизайн на 15 языках
 - ⚡ **Оптимизация Intel** — ускорение через OpenVINO
 - 🔒 **Безопасность** — авторизация с JWT токенами
+
+### 📸 Интерфейс
+
+<div align="center">
+
+![Интерфейс приложения](img/interface.png)
+*Главный экран приложения*
+
+</div>
+
+### 🎬 Демонстрация
+
+<details>
+<summary><b>▶️ Обработка одного видео</b></summary>
+
+https://github.com/user-attachments/assets/one_video.mp4
+
+</details>
+
+<details>
+<summary><b>🔗 Загрузка торрента (полный процесс)</b></summary>
+
+https://github.com/user-attachments/assets/torrent_full.mp4
+
+</details>
+
+<details>
+<summary><b>📦 Выбор серий в торренте</b></summary>
+
+![Выбор серий](img/torrent_m.png)
+
+https://github.com/user-attachments/assets/torrent_multi.mp4
+
+</details>
+
+### ⚙️ Настройки
+
+<div align="center">
+
+| Языки интерфейса | Модели распознавания | Настройки |
+|:---:|:---:|:---:|
+| ![Языки](img/Interface_Language.png) | ![Модели](img/Recognition_Model.png) | ![Настройки](img/Settings.png) |
+
+</div>
 
 ### 🖥️ Системные требования
 
@@ -82,7 +126,7 @@
 #### 1️⃣ Клонируйте репозиторий
 
 ```bash
-git clone https://github.com/your-username/whisper-subtitles.git
+git clone https://github.com/timoil/whisper-subtitles.git
 cd whisper-subtitles
 ```
 
@@ -244,6 +288,50 @@ The application uses the cutting-edge **OpenAI Whisper** neural network, optimiz
 - ⚡ **Intel optimization** — OpenVINO acceleration
 - 🔒 **Security** — JWT token authorization
 
+### 📸 Interface
+
+<div align="center">
+
+![Application interface](img/interface.png)
+*Main application screen*
+
+</div>
+
+### 🎬 Demo
+
+<details>
+<summary><b>▶️ Processing a single video</b></summary>
+
+https://github.com/user-attachments/assets/one_video.mp4
+
+</details>
+
+<details>
+<summary><b>🔗 Torrent download (full process)</b></summary>
+
+https://github.com/user-attachments/assets/torrent_full.mp4
+
+</details>
+
+<details>
+<summary><b>📦 Selecting episodes from torrent</b></summary>
+
+![Episode selection](img/torrent_m.png)
+
+https://github.com/user-attachments/assets/torrent_multi.mp4
+
+</details>
+
+### ⚙️ Settings
+
+<div align="center">
+
+| Interface Languages | Recognition Models | Settings |
+|:---:|:---:|:---:|
+| ![Languages](img/Interface_Language.png) | ![Models](img/Recognition_Model.png) | ![Settings](img/Settings.png) |
+
+</div>
+
 ### 🖥️ System Requirements
 
 | Component | Minimum | Recommended |
@@ -258,7 +346,7 @@ The application uses the cutting-edge **OpenAI Whisper** neural network, optimiz
 #### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-username/whisper-subtitles.git
+git clone https://github.com/timoil/whisper-subtitles.git
 cd whisper-subtitles
 ```
 
